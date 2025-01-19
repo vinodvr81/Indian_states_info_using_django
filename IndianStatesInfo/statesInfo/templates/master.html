@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}{% endblock %}</title>
+    {% load static %}
+<link rel="stylesheet" href="{% static 'statesInfo/css/styles.css' %}">
+</head>
+<body>
+
+{% block content %}
+    <header>
+        <h1>India and It's States Information</h1>
+    </header>
+
+    <p>Description: Indian States Information</p>
+    <p>Check out the information here <a href="statesInfo/">States Information</a></p>
+
+    <footer>
+        <p>&copy; 2025 By Vinod Vukkalam. All rights reserved.</p>
+    </footer>
+
+
+
+{% endblock %}
+
+</body>
+</html>
+

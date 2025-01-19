@@ -1,0 +1,37 @@
+{% extends "master.html" %}
+{% load custom_filters %}
+{% zip_lists list1 list2 %}
+{% zip_lists list1 list2 %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'statesInfo/css/styles.css' %}">
+{% block title %}
+  All Indian States and corresponding Information
+{% endblock %}
+
+
+{% block content %}
+<body>
+    <h1>States Information</h1>
+    <p>Return to home <a href="/">Home</a></p>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>State Name</th>
+                <th>City Capital</th>
+                <th>Population</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for state, city, population in combined_data %}
+
+            <tr>
+                <td>{{ state }}</td>
+                <td>{{ city }}</td>
+                <td>{{ population }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+{% endblock %}
