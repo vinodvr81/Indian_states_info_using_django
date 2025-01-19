@@ -16,3 +16,6 @@ def state_info(request):
     combined_data = zip(states_names, city_cap, pop_no)
     context = {'combined_data': combined_data}
     return render(request, 'all_states.html', context)
+
+def no_four(request):
+    return render(request, '404.html', {})
